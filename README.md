@@ -16,6 +16,14 @@ npm test
 
 The production website is generated in `dist/`. Serve that directory with any static web host. No database, API key, paid service, or environment variable is required.
 
+## Vercel deployment
+
+Production URL: https://sai-srinivas-constructions.vercel.app
+
+The Vercel project is `sai-srinivas-constructions` in team `kotavksprasad15-6130s-projects`. It uses Node.js 24, the Vite framework preset, `npm ci`, `npm run build`, and the `dist` output directory. The current source was uploaded directly; automatic GitHub deployments are not configured. The checkout has an ignored `.vercel/project.json` linking it to this project for future authenticated CLI deployments (`vercel --prod`).
+
+Vercel's existing authentication protection remains enabled, so visitors may need authorized Vercel access. Making this deployment publicly accessible still requires approval to change that protection setting.
+
 ## Add the real business contact details
 
 Edit **`src/config/company.ts`**:
