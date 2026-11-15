@@ -20,7 +20,7 @@ The production website is generated in `dist/`. Serve that directory with any st
 
 Production URL: https://sai-srinivas-constructions.vercel.app
 
-The Vercel project is `sai-srinivas-constructions` in team `kotavksprasad15-6130s-projects`. It uses Node.js 24, the Vite framework preset, `npm ci`, `npm run build`, and the `dist` output directory. The current source was uploaded directly; automatic GitHub deployments are not configured. The checkout has an ignored `.vercel/project.json` linking it to this project for future authenticated CLI deployments (`vercel --prod`).
+The Vercel project is `sai-srinivas-constructions` in team `kotavksprasad15-6130s-projects`. It uses Node.js 24, the Vite framework preset, `npm ci`, `npm run build`, and the `dist` output directory. The project is connected to `kotaprasad15/Sai-Srinivas-Constructions` on GitHub. The checkout also has an ignored `.vercel/project.json` linking it to this project for authenticated CLI deployments (`vercel --prod`).
 
 Vercel's existing authentication protection remains enabled, so visitors may need authorized Vercel access. Making this deployment publicly accessible still requires approval to change that protection setting.
 
@@ -31,8 +31,8 @@ Edit **`src/config/company.ts`**:
 | Field | Value to supply |
 | --- | --- |
 | `name` | Official company name (already populated) |
-| `whatsappNumber` | Full WhatsApp number including country code; no local leading zero |
-| `email` | Actual Gmail or business email address |
+| `whatsappNumber` | Configured as `917337005866` (India: +91 7337005866) |
+| `email` | Configured as `kotasri07@gmail.com` |
 | `phone` | Actual public phone number, preferably including country code |
 | `address` | Approved business/postal address |
 | `whatsappMessage` | Optional introductory enquiry text (already populated) |
@@ -61,7 +61,7 @@ The current architectural images are decorative stock photographs, not company p
 
 ## Remaining business information
 
-1. Actual WhatsApp number (with country code), public telephone number, email and address.
+1. Public telephone number and business address. WhatsApp and email are configured.
 2. For each real project: approved title, summary, category, ongoing/completed status, any publishable location, photographs and image descriptions.
 3. Official logo artwork if you prefer to replace the current custom architectural wordmark.
 4. Final website domain before adding a canonical URL, absolute social preview image URL and sitemap. Update `index.html` metadata if the business name changes.

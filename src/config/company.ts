@@ -6,8 +6,8 @@
 export const company = {
   name: 'SAI SRINIVAS CONSTRUCTIONS',
   tagline: 'Building Trust. Creating Tomorrow.',
-  whatsappNumber: '',
-  email: '',
+  whatsappNumber: '917337005866',
+  email: 'kotasri07@gmail.com',
   phone: '',
   address: '',
   whatsappMessage:
