@@ -91,7 +91,7 @@ export default function Contact() {
           <dl className="contact-details">
             <div><Phone size={19} aria-hidden="true" /><div><dt>CALL US</dt><dd>{phoneHref ? <a href={phoneHref}>{company.phone}</a> : company.phone || 'Phone number coming soon'}</dd></div></div>
             <div><Mail size={19} aria-hidden="true" /><div><dt>WRITE TO US</dt><dd>{emailHref ? <a href={emailHref}>{company.email}</a> : 'Email address coming soon'}</dd></div></div>
-            <div><MapPin size={19} aria-hidden="true" /><div><dt>VISIT US</dt><dd>{company.address || 'Business address coming soon'}</dd></div></div>
+            <div><MapPin size={19} aria-hidden="true" /><div><dt>LOCATION</dt><dd>{company.address || 'Business address coming soon'}</dd></div></div>
           </dl>
         </div>
         <div className="contact-form-panel reveal">

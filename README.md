@@ -34,7 +34,7 @@ Edit **`src/config/company.ts`**:
 | `whatsappNumber` | Configured as `917337005866` (India: +91 7337005866) |
 | `email` | Configured as `kotasri07@gmail.com` |
 | `phone` | Configured as `+91 7337005866`, matching WhatsApp |
-| `address` | Approved business/postal address |
+| `address` | Configured company location: `Visakhapatnam` |
 | `whatsappMessage` | Optional introductory enquiry text (already populated) |
 
 Missing contacts deliberately display “coming soon.” No fake numbers or mailboxes are used. WhatsApp and email shortcuts explain availability until configured. The enquiry form validates required fields, prepares a message, and lets the visitor review it before continuing to WhatsApp or their email application. The visitor must send the message in that application. The form also supports copying the prepared enquiry, with a selectable text fallback if clipboard access is unavailable. There is no backend submission and no fake success message. Editing a field invalidates the prepared message to avoid sending stale information. Personal information is not stored or sent to a server by the site.
@@ -61,7 +61,7 @@ The current architectural images are decorative stock photographs, not company p
 
 ## Remaining business information
 
-1. Business address. Telephone, WhatsApp and email are configured.
+1. Optional full street/postal address. The company location is Visakhapatnam; telephone, WhatsApp and email are configured.
 2. For each real project: approved title, summary, category, ongoing/completed status, any publishable location, photographs and image descriptions.
 3. Official logo artwork if you prefer to replace the current custom architectural wordmark.
 4. Final website domain before adding a canonical URL, absolute social preview image URL and sitemap. Update `index.html` metadata if the business name changes.

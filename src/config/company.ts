@@ -9,7 +9,7 @@ export const company = {
   whatsappNumber: '917337005866',
   email: 'kotasri07@gmail.com',
   phone: '+91 7337005866',
-  address: '',
+  address: 'Visakhapatnam',
   whatsappMessage:
     'Hello SAI SRINIVAS CONSTRUCTIONS, I would like to enquire about your construction services.',
 };
