@@ -8,7 +8,7 @@ export const company = {
   tagline: 'Building Trust. Creating Tomorrow.',
   whatsappNumber: '917337005866',
   email: 'kotasri07@gmail.com',
-  phone: '',
+  phone: '+91 7337005866',
   address: '',
   whatsappMessage:
     'Hello SAI SRINIVAS CONSTRUCTIONS, I would like to enquire about your construction services.',
