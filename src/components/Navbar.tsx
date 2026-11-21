@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowUpRight, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Logo } from './Logo'
 
 export const navigation = [ ['Home', 'home'], ['About Us', 'about'], ['Expertise', 'expertise'], ['Experience', 'experience'], ['Projects', 'projects'], ['Contact', 'contact'] ] as const
@@ -43,12 +43,12 @@ export function Navbar() {
   return <header className={`site-header ${scrolled ? 'is-scrolled' : ''} ${open ? 'menu-open' : ''}`}>
     <div className="container navbar"><Logo onClick={() => setOpen(false)} />
       <nav className="desktop-nav" aria-label="Main navigation">{navigation.map(([label, id]) => <a key={id} href={`#${id}`} className={active === id ? 'active' : ''} aria-current={active === id ? 'location' : undefined}>{label}</a>)}</nav>
-      <a className="button button-primary nav-cta" href="#contact">Get In Touch <ArrowUpRight size={17} /></a>
+      <a className="button button-primary nav-cta" href="#contact">Get In Touch</a>
       <button ref={toggle} className="menu-toggle" type="button" onClick={() => setOpen(!open)} aria-label={open ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={open} aria-controls="mobile-navigation">{open ? <X /> : <Menu />}</button>
     </div>
     <nav ref={menu} id="mobile-navigation" className={`mobile-nav ${open ? 'is-open' : ''}`} aria-label="Mobile navigation" inert={!open}>
-      {navigation.map(([label, id], i) => <a key={id} href={`#${id}`} onClick={() => { setOpen(false); document.getElementById(id)?.focus({ preventScroll: true }) }}><span>0{i + 1}</span>{label}<ArrowUpRight size={20} /></a>)}
-      <p>Building Trust. Creating Tomorrow.</p>
+      {navigation.map(([label, id]) => <a key={id} href={`#${id}`} onClick={() => { setOpen(false); document.getElementById(id)?.focus({ preventScroll: true }) }}>{label}</a>)}
+      <a href="#contact" className="mobile-cta" onClick={() => setOpen(false)}>Get In Touch</a>
     </nav>
   </header>
 }

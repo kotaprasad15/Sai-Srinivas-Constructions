@@ -1,5 +1,3 @@
-import { SectionLabel } from './SectionLabel'
-
 const values = [
   ['Industry Experience', 'Practical industry exposure that informs our approach to every requirement.'],
   ['Professional Approach', 'Clear communication and a considered way of working, from the outset.'],
@@ -10,5 +8,19 @@ const values = [
 ]
 
 export function WhyChooseUs() {
-  return <section className="section why" aria-labelledby="why-title"><div className="container"><div className="section-heading reveal"><div><SectionLabel number="05">THE WAY WE WORK</SectionLabel><h2 id="why-title">Why Work <span>With Us?</span></h2></div><p>Good construction begins with the right principles.<br />These are the values that guide our work.</p></div><div className="values-grid">{values.map(([title, description], i) => <article className="value-item reveal" key={title}><span className="value-number">0{i + 1}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div></div></section>
+  return (
+    <section id="values" className="section editorial-section" aria-labelledby="why-title">
+      <div className="container">
+        <h2 id="why-title" className="reveal">Why work with us?</h2>
+        <dl className="values-list">
+          {values.map(([title, description]) => (
+            <div key={title} className="reveal">
+              <dt>{title}</dt>
+              <dd>{description}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+  )
 }

@@ -1,6 +1,21 @@
-import { ArrowUpRight } from 'lucide-react'
-import { SectionLabel } from './SectionLabel'
-
 export function Experience() {
-  return <section id="experience" className="section experience" aria-labelledby="experience-title" tabIndex={-1}><div className="container experience-grid"><div className="experience-intro reveal"><SectionLabel number="03">PROFESSIONAL BACKGROUND</SectionLabel><h2 id="experience-title">Experience that<br /><span>shapes every project.</span></h2><p>Industry exposure. Practical understanding.<br />A strong foundation for independent work.</p><div className="experience-rule" /></div><div className="experience-cards"><article className="experience-card reveal"><div className="experience-card-top"><span className="eyebrow">INDUSTRY EXPERIENCE</span><ArrowUpRight aria-hidden="true" size={24} /></div><h3>ESSAR</h3><p>Previous professional experience with ESSAR, contributing to industry knowledge and practical exposure.</p></article><article className="experience-card reveal"><div className="experience-card-top"><span className="eyebrow">CONTRACT EXPERIENCE</span><ArrowUpRight aria-hidden="true" size={24} /></div><h3>MES <span>Military Engineer Services</span></h3><p>Enlisted Contractor in Military Engineer Services.</p><p>Previous experience undertaking MES contracts, providing exposure to structured construction and engineering contract work.</p></article><p className="experience-disclosure">The ESSAR reference describes prior professional experience. No partnership or endorsement by ESSAR or MES is implied.</p></div></div></section>
+  return (
+    <section id="experience" className="section editorial-section" aria-labelledby="experience-title" tabIndex={-1}>
+      <div className="container experience-spread">
+        <h2 id="experience-title" className="reveal">Experience that shapes every project</h2>
+        <div className="experience-records">
+          <article className="experience-record reveal">
+            <h3>ESSAR</h3>
+            <p>Previous professional experience with ESSAR, contributing to industry knowledge and practical exposure.</p>
+          </article>
+          <article className="experience-record reveal">
+            <h3>MES — Military Engineer Services</h3>
+            <p>Enlisted Contractor in Military Engineer Services.</p>
+            <p>Previous experience undertaking MES contracts, providing exposure to structured construction and engineering contract work.</p>
+          </article>
+          <p className="experience-qualification">The ESSAR reference describes prior professional experience. No partnership or endorsement by ESSAR or MES is implied.</p>
+        </div>
+      </div>
+    </section>
+  )
 }

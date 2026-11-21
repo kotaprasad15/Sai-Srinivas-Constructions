@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import '@fontsource-variable/manrope'
-import '@fontsource/barlow-condensed/latin-600.css'
+import '@fontsource/instrument-serif/latin-400.css'
+import '@fontsource/cousine/latin-400.css'
 import './styles.css'
 import App from './App'
 

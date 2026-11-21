@@ -1,8 +1,45 @@
-import { ArrowUpRight, ArrowUp } from 'lucide-react'
+import { ArrowUp } from 'lucide-react'
+import { company } from '../config/company'
+import { getPhoneHref } from '../lib/contact'
 import { Logo } from './Logo'
 import ContactAction from './ContactAction'
-import { company } from '../config/company'
+import './footer.css'
+
+const footerLinks = [
+  ['Home', 'home'],
+  ['About', 'about'],
+  ['Expertise', 'expertise'],
+  ['Experience', 'experience'],
+  ['Projects', 'projects'],
+  ['Contact', 'contact'],
+]
 
 export function Footer() {
-  return <footer className="footer"><div className="container"><div className="footer-main"><div className="footer-brand"><Logo /><p>Building Trust. Creating Tomorrow.</p></div><div className="footer-links"><h3>EXPLORE</h3>{[['Home', 'home'], ['About', 'about'], ['Expertise', 'expertise'], ['Projects', 'projects'], ['Contact', 'contact']].map(([label, id]) => <a href={`#${id}`} key={id}>{label}</a>)}</div><div className="footer-links footer-connect"><h3>START A CONVERSATION</h3><ContactAction channel="whatsapp">WhatsApp <ArrowUpRight size={16} /></ContactAction><ContactAction channel="email">Email <ArrowUpRight size={16} /></ContactAction><span>Let’s bring your vision to life.</span></div></div><div className="footer-bottom"><p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p><a href="#home">BACK TO TOP <ArrowUp size={16} /></a></div></div></footer>
+  const phoneHref = getPhoneHref()
+
+  return (
+    <footer className="site-footer">
+      <div className="container">
+        <div className="site-footer-columns">
+          <div className="site-footer-brand">
+            <Logo />
+            <p>{company.tagline}</p>
+          </div>
+          <nav className="site-footer-links" aria-label="Footer navigation">
+            {footerLinks.map(([label, id]) => <a href={`#${id}`} key={id}>{label}</a>)}
+          </nav>
+          <address className="site-footer-address">
+            <p>{company.address}</p>
+            {phoneHref && <a href={phoneHref}>{company.phone}</a>}
+            <ContactAction channel="email">{company.email || 'Email'}</ContactAction>
+            <ContactAction channel="whatsapp">WhatsApp</ContactAction>
+          </address>
+        </div>
+        <div className="site-footer-base">
+          <p>© {new Date().getFullYear()} {company.name}.</p>
+          <a href="#home">Back to top <ArrowUp size={15} aria-hidden="true" /></a>
+        </div>
+      </div>
+    </footer>
+  )
 }

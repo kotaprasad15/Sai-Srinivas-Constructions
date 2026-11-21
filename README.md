@@ -71,4 +71,4 @@ The current architectural images are decorative stock photographs, not company p
 
 Production compilation and contact tests are run during delivery. The website includes mobile navigation with Escape handling, keyboard focus management, a skip link, native form labels/validation, reduced-motion support, responsive image sources, local font files and lazy-loaded below-the-fold images. No fabricated projects, testimonials, statistics, certifications, or endorsements are included.
 
-Automated tests verify generated contact URLs without sending any enquiry. Actual delivery needs the real contact details. The managed browser-preview relay in the delivery environment timed out, so a visual viewport sweep and Lighthouse audit must be completed in an available browser before public launch.
+Automated tests check contact-link destinations and message encoding. Browser checks on the production build verified layouts from 320 to 1440 pixels, section navigation, keyboard interaction, and preparation of WhatsApp and email enquiries.
